@@ -1,0 +1,14 @@
+$fonts: (
+    OpenSans-family: 'Open Sans',
+    Barlow-family: 'Barlow',
+    Gothic-family: 'Gothic A1',
+    RobotoCon-family: 'Roboto Condensed',
+    Roboto-family: 'Roboto'
+);
+
+@function font($key) {
+    @if map-has-key($map: $fonts, $key: $key){
+        @return map-get($map: $fonts, $key: $key);
+    }
+    @return null;
+}
