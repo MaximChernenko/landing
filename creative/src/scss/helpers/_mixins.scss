@@ -1,0 +1,6 @@
+@mixin background-sett($img, $repeat: no-repeat, $pos: center, $size: cover){
+    background-image: $img;
+    background-repeat: $repeat;
+    background-position: $pos;
+    background-size: $size;
+}

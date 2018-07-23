@@ -1,0 +1,195 @@
+.header {
+    @include background-sett(url(../img/header.jpg));
+    min-width: 320px;
+    min-height: 660px;
+    @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../img/header@2x.jpg);
+    }
+    @media screen and (min-width: 1200px) {
+        min-height: 850px;
+    }
+}
+
+.header-container {
+    @media screen and (min-width: 1200px) {
+        @extend %display-sett;
+        padding: 30px 0 30px 34px;
+        align-items: center;
+        margin-bottom: 280px;
+        border-bottom: 1px solid rgba(color(secondary-grey), 0.6);
+    }
+}
+
+.inner {
+    @media screen and (min-width: 1200px) {
+        width: 877px;
+        @extend %display-sett;
+        align-items: center;
+    }
+}
+
+.logo {
+    width: 67px;
+    @media screen and (max-width: 1199px) {
+        display: block;
+        margin: 0 auto 40px;
+        padding-top: 40px;
+    }
+}
+
+//mixin to background color today!!!!
+.logo__flow {
+    position: relative;
+    background-color: rgba(color(primary-light), 0.749);
+    height: 67px;
+    &:hover .logo__action {
+        top: -8px;
+        left: -12px;
+    }
+}
+
+.logo__action {
+    @include background-sett(url(../img/logo.svg));
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: color(primary-blue);
+    width: 67px;
+    height: 67px;
+}
+
+.nav {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 40px;
+    }
+}
+
+.menu {
+    @media screen and (max-width: 1199px) {
+        display: inline-block;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 702px;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.menu__item {
+    &:hover {
+        @media screen and (max-width: 1199px) {
+            background-color: rgba(color(primary-light), 0.749);
+        }
+    }
+    &:hover .menu__link {
+        color: color(primary-blue);
+    }
+    @media screen and (min-width: 1200px) {
+        &::after {
+            content: '';
+            margin-top: 26px;
+            display: none;
+            width: 100%;
+            height: 6px;
+            background-color: color(primary-blue);
+        }
+        &:hover::after {
+            display: block;
+        }
+    }
+}
+
+.menu__link {
+    font-family: font(Barlow-family), sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: color(primary-light);
+}
+
+.socials {
+    @extend %display-sett;
+    @media screen and (max-width: 1199px) {
+        width: 250px;
+        margin: 0 auto 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 146px;
+        height: 20px;
+    }
+}
+
+.socials__icon {
+    width: 24px;
+    height: 24px;
+    fill: color(primary-light);
+    &:hover {
+        fill: color(primary-blue);
+    }
+    @media screen and (min-width: 1200px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.header__main-title {
+    font-family: font(Gothic-family), sans-serif;
+    font-size: 3.125rem;
+    font-weight: 700;
+    color: color(primary-light);
+    text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+        font-size: 8.7rem;
+        letter-spacing: 6px;
+    }
+}
+
+.header__text {
+    font-family: font(Gothic-family), sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: color(primary-blue);
+    text-transform: uppercase;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 1.38rem;
+        margin-bottom: 94px;
+        line-height: 1;
+        letter-spacing: 22px;
+        padding-left: 22px;
+    }
+}
+
+.scroll-ref {
+    font-family: font(OpenSans-family);
+    font-size: 1.25rem;
+    line-height: 2;
+    color: color(primary-light);
+    &__des {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 62px;
+        height: 62px;
+        border: 2px solid color(primary-light);
+        border-radius: 50%;
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 34px;
+        height: 24px;
+        fill: color(primary-light);
+        &:hover {
+            fill: color(primary-blue);
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        line-height: 4;
+        font-size: 0.8rem;
+    }
+}
