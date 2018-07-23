@@ -1,5 +1,5 @@
 .header {
-    @include background-sett(url(../img/header.jpg));
+    @include background-sett(url(../img/header.jpg),$pos: 48% 0, $size: none);
     min-width: 320px;
     min-height: 660px;
     @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -7,24 +7,30 @@
     }
     @media screen and (min-width: 1200px) {
         min-height: 850px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 115px;
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: rgba(color(secondary-grey), 0.6);
+        }
     }
 }
 
 .header-container {
     @media screen and (min-width: 1200px) {
-        @extend %display-sett;
-        padding: 30px 0 30px 34px;
-        align-items: center;
+        @include flex-pos($align-items: center);
+        padding: 30px 0 0 34px;
         margin-bottom: 280px;
-        border-bottom: 1px solid rgba(color(secondary-grey), 0.6);
     }
 }
 
 .inner {
     @media screen and (min-width: 1200px) {
         width: 877px;
-        @extend %display-sett;
-        align-items: center;
+        @include flex-pos($align-items: center);
     }
 }
 
@@ -49,13 +55,19 @@
 }
 
 .logo__action {
-    @include background-sett(url(../img/logo.svg));
     position: absolute;
     top: 0;
     left: 0;
     background-color: color(primary-blue);
     width: 67px;
     height: 67px;
+}
+
+.logo-icon {
+    @include absolute-centered($transform: translate(-55%,-50%));
+    position: absolute;
+    width: 34px;
+    height: 24px;
 }
 
 .nav {
@@ -71,8 +83,7 @@
     @media screen and (min-width: 1200px) {
         width: 702px;
         height: 30px;
-        display: flex;
-        justify-content: space-around;
+        @include flex-pos($justify-content: space-around);
     }
 }
 
@@ -88,7 +99,7 @@
     @media screen and (min-width: 1200px) {
         &::after {
             content: '';
-            margin-top: 26px;
+            margin-top: 30px;
             display: none;
             width: 100%;
             height: 6px;
@@ -108,7 +119,7 @@
 }
 
 .socials {
-    @extend %display-sett;
+    @include flex-pos();
     @media screen and (max-width: 1199px) {
         width: 250px;
         margin: 0 auto 30px;
@@ -178,9 +189,7 @@
     }
     &__icon {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include absolute-centered();
         width: 34px;
         height: 24px;
         fill: color(primary-light);
