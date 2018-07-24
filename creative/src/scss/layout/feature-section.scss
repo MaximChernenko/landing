@@ -3,6 +3,9 @@
     min-width: 320px;
     background-color: color(primary-blue);
     padding: 40px 0;
+    @media screen and (min-width: 1200px) {
+        padding: 167px 0 104px;
+    }
 }
 
 .feature-section__title {
@@ -13,11 +16,28 @@
     text-transform: uppercase;
     color: color(primary-light);
     margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+        font-size: 2.35rem;
+        padding: 0 0 84px 35px;
+        letter-spacing: 3px;
+    }
+}
+
+.feature-section__list {
+    @media screen and (min-width: 1200px) {
+        @include flex-pos();
+        flex-wrap: wrap;
+        width: 1170px;
+        margin: 0 auto;
+    }
 }
 
 .item-section {
     &:not(:last-child) {
         margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 270px;
     }
 }
 
@@ -27,13 +47,17 @@
     font-family: font(RobotoCon-family);
     font-size: 120px;
     color: color(decor-blue);
+    @media screen and (min-width: 1200px) {
+        font-size: 15.5rem;
+        top: 134px;
+    }
 }
 
 .item-section__des {
     position: relative;
     display: block;
-    width: 132px;
-    height: 132px;
+    width: 134px;
+    height: 134px;
     background-color: color(secondary-blue);
     border-radius: 50%;
     margin: 0 auto 20px;
@@ -53,9 +77,21 @@
     text-transform: uppercase;
     color: color(primary-light);
     margin-bottom: 10px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 24px;
+        font-size: 1.125rem;
+    }
 }
 
 .item-section__text {
     font-family: font(Gothic-family);
     color: color(secondary-light);
+    @media screen and (min-width: 1200px) {
+        font-size: 0.94rem;
+        line-height: 1.6;
+    }
+}
+
+.prove {
+    width: 30px;
 }

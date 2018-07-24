@@ -549,8 +549,8 @@ a {
 .item-section__des {
   position: relative;
   display: block;
-  width: 132px;
-  height: 132px;
+  width: 134px;
+  height: 134px;
   background-color: #2e85aa;
   border-radius: 50%;
   margin: 0 auto 20px;
@@ -580,13 +580,28 @@ a {
   color: #d7d7d7;
 }
 
+.prove {
+  width: 30px;
+}
+
+.akita-section__container:nth-child(1) {
+  padding-top: 40px;
+  background-color: #222222;
+}
+
+.akita-section__sup-text {
+  font-family: "Gothic A1";
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 1200px) {
   .wrapper {
     width: 1200px;
   }
 
   .header {
-    min-height: 850px;
+    min-height: 880px;
   }
 
   .header::before {
@@ -661,6 +676,44 @@ a {
   .scroll-ref {
     line-height: 4;
     font-size: 0.8rem;
+  }
+
+  .feature-section {
+    padding: 167px 0 104px;
+  }
+
+  .feature-section__title {
+    font-size: 2.35rem;
+    padding: 0 0 84px 35px;
+    letter-spacing: 3px;
+  }
+
+  .feature-section__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  .item-section {
+    width: 270px;
+  }
+
+  .decor {
+    font-size: 15.5rem;
+    top: 134px;
+  }
+
+  .item-section__title {
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+  }
+
+  .item-section__text {
+    font-size: 0.94rem;
+    line-height: 1.6;
   }
 }
 
