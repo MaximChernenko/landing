@@ -1,9 +1,12 @@
 .header {
-    @include background-sett(url(../img/header.jpg),$pos: 48% 0, $size: none);
+    @include background-sett(url(../img/header.jpg),$pos: 48% 0, $size: auto);
     min-width: 320px;
     min-height: 660px;
     @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url(../img/header@2x.jpg);
+    }
+    @media screen and (max-width: 1199px) {
+        padding-top: 40px;
     }
     @media screen and (min-width: 1200px) {
         min-height: 850px;
@@ -39,7 +42,7 @@
     @media screen and (max-width: 1199px) {
         display: block;
         margin: 0 auto 40px;
-        padding-top: 40px;
+        // padding-top: 40px;
     }
 }
 

@@ -1,0 +1,61 @@
+.feature-section {
+    position: relative;
+    min-width: 320px;
+    background-color: color(primary-blue);
+    padding: 40px 0;
+}
+
+.feature-section__title {
+    position: relative;
+    font-family: font(Gothic-family);
+    font-weight: 500;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: color(primary-light);
+    margin-bottom: 50px;
+}
+
+.item-section {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.decor {
+    position: absolute;
+    transform: translate(-50%, -30%);
+    font-family: font(RobotoCon-family);
+    font-size: 120px;
+    color: color(decor-blue);
+}
+
+.item-section__des {
+    position: relative;
+    display: block;
+    width: 132px;
+    height: 132px;
+    background-color: color(secondary-blue);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.item-section__icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    fill: color(primary-light);
+    @include absolute-centered();
+}
+
+.item-section__title {
+    font-family: font(Gothic-family);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: color(primary-light);
+    margin-bottom: 10px;
+}
+
+.item-section__text {
+    font-family: font(Gothic-family);
+    color: color(secondary-light);
+}
