@@ -12,3 +12,16 @@
         width: 1200px;
     }
 }
+
+.inner-wrapper {
+    box-sizing: border-box;
+    width: 320px;
+    margin: 0 auto;
+    @media screen and (max-width: 1199px) {
+        padding: 0 10px 0 10px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 470px;
+        margin: auto;
+    }
+}

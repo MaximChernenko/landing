@@ -113,10 +113,7 @@
 }
 
 .menu__link {
-    font-family: font(Barlow-family), sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: color(primary-light);
+    @include font-sett(font(Barlow-family), 1.25rem, $height: 1.5);
 }
 
 .socials {
@@ -145,11 +142,7 @@
 }
 
 .header__main-title {
-    font-family: font(Gothic-family), sans-serif;
-    font-size: 3.125rem;
-    font-weight: 700;
-    color: color(primary-light);
-    text-transform: uppercase;
+    @include font-sett($size: 3.125rem, $weight:700, $transform: uppercase);
     @media screen and (min-width: 1200px) {
         font-size: 8.7rem;
         letter-spacing: 6px;
@@ -157,11 +150,7 @@
 }
 
 .header__text {
-    font-family: font(Gothic-family), sans-serif;
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: color(primary-blue);
-    text-transform: uppercase;
+    @include font-sett($size: 1.125rem, $weight:500, $transform: uppercase, $color: color(primary-blue));
     @media screen and (max-width: 1199px) {
         margin-bottom: 30px;
     }
@@ -175,10 +164,7 @@
 }
 
 .scroll-ref {
-    font-family: font(OpenSans-family);
-    font-size: 1.25rem;
-    line-height: 2;
-    color: color(primary-light);
+    @include font-sett($family: font(OpenSans-family), $size: 1.25rem, $height: 2);
     &__des {
         position: relative;
         display: block;

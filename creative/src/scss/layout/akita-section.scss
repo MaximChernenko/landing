@@ -1,22 +1,51 @@
 .akita-section {
-
+    @media screen and (min-width: 1200px) {
+        @include flex-pos($justify-content: stretch);
+        flex-wrap: wrap;
+    }
 }
 
-.akita-section__container:nth-child(1) {
-    padding-top: 40px;
-    background-color: color(primary-dark);
+.akita-section__container {
+    flex-basis: 50%;
+    &:nth-child(1){
+        @extend %akita-section-container-sett;
+        background-color: color(primary-dark);
+        color: color(secondary-light);
+        min-height: 446px;
+    }
+    &:nth-child(2){
+        min-height: 446px;
+        @include background-sett(url(../img/img1.jpg));
+        @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            @include background-sett(url(../img/img1@2x.jpg));
+        }
+    }
+    &:nth-child(3){
+        order: 1;
+        @extend %akita-section-container-sett;
+        background-color: color(secondary-light);
+        color: color(primary-dark);
+        min-height: 476px;
+    }
+    &:nth-child(4){
+        min-height: 476px;
+        @include background-sett(url(../img/img2.jpg));
+        @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            @include background-sett(url(../img/img2@2x.jpg));
+        }
+    }
 }
 
 .akita-section__sup-text {
-    font-family: font(Gothic-family);
-    font-size: 0.8rem;
+    @include font-sett($size: 0.8rem, $color: inherit);
     margin-bottom: 10px;
 }
 
 .akita-section__title {
-
+    @include font-sett($size: 1.56rem, $weight: 500, $transform: uppercase, $color: inherit);
+    margin-bottom: 36px;
 }
 
 .akita-section__text {
-
+    @include font-sett($size: 0.94rem, $height: 1.6, $color: inherit);
 }
