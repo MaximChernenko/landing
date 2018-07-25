@@ -25,3 +25,11 @@
         margin: auto;
     }
 }
+
+.inner-container {
+    @media screen and (min-width: 1200px) {
+        position: relative;
+        width: 486px;
+        padding-left: 36px;
+    }
+}

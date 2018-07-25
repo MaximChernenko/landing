@@ -7,3 +7,29 @@
         display: flex;
     }
 }
+
+%section-list-sett {
+    @media screen and (min-width: 1200px) {
+        @include flex-pos();
+        flex-wrap: wrap;
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+%section-item-sett {
+    @media screen and (max-width: 1199px) {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
+}
+
+%response-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

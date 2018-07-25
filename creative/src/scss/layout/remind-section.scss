@@ -1,0 +1,53 @@
+.remind-section {
+    box-sizing: border-box;
+    background-color: color(primary-blue);
+    min-height: 354px;
+    padding: 30px 0;
+    @media screen and (min-width: 1200px) {
+        padding: 110px 0 148px;
+    }
+}
+
+.remind-section__list {
+    @extend %section-list-sett;
+}
+
+.remind-section__item {
+    position: relative;
+    @media screen and (max-width: 1199px) {
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        box-sizing: border-box;
+        width: 554px;
+        padding-left: 112px;
+    }
+}
+
+.remind-section__icon {
+    width: 35px;
+    height: 35px;
+    fill: color(primary-light);
+    transform: scale(1.7);
+    @media screen and (max-width: 1199px) {
+        float: left;
+        padding: 16px 21px 10px 17px;
+    }
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        top: 20px;
+        left: 26px;
+        transform: scale(2);
+    }
+}
+
+.remind-section__text {
+    text-align: left;
+    @include font-sett($size: 0.94rem, $height: 1.6);
+    @media screen and (min-width: 1200px) {
+        font-size: 0.96rem;
+        letter-spacing: 0.3px;
+    }
+}

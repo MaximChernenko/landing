@@ -1,0 +1,73 @@
+.services-section {
+    box-sizing: border-box;
+    padding: 30px 0;
+    @include background-sett(url(../img/akita-back.jpg));
+    @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        @include background-sett(url(../img/akita-back@2x.jpg));
+    }
+    @media screen and (min-width: 1200px) {
+        min-height: 844px;
+        padding: 224px 0 200px;
+    }
+}
+
+.services-section__title {
+    @include font-sett($size: 1.56rem, $weight: 500, $transform: uppercase);
+    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        margin-bottom: 29px;
+        letter-spacing: 2px;
+    }
+}
+
+.services-section__text {
+    text-align: left;
+    @include font-sett($size: 0.94rem, $height: 1.6);
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        letter-spacing: 1.2px;
+        margin-bottom: 64px;
+    }
+}
+
+.services-section__item {
+    text-align: left;
+    width: 100%;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+        &:first-child {
+            width: 370px;
+        }
+
+        &:nth-child(2) {
+            width: 400px;
+        }
+
+        &:last-child {
+            width: 430px;
+        }
+    }
+}
+
+.services-section__link {
+    box-sizing: border-box;
+    display: block;
+    background-color: color(primary-blue);
+    height: 40px;
+    padding: 10px 0 10px 16px;
+    letter-spacing: 1px;
+    @include font-sett($size: 0.94rem, $weight: 500, $transform: uppercase, $height: 1.6);
+}
+
+.services-section__img {
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+        position: absolute;
+        top: -126px;
+        right: -594px;
+    }
+}

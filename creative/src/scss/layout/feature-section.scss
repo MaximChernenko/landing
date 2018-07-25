@@ -4,7 +4,7 @@
     background-color: color(primary-blue);
     padding: 40px 0;
     @media screen and (min-width: 1200px) {
-        padding: 167px 0 104px;
+        padding: 167px 0 124px;
     }
 }
 
@@ -20,21 +20,11 @@
 }
 
 .feature-section__list {
-    @media screen and (min-width: 1200px) {
-        @include flex-pos();
-        flex-wrap: wrap;
-        width: 1170px;
-        margin: 0 auto;
-    }
+    @extend %section-list-sett;
 }
 
 .item-section {
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-    @media screen and (min-width: 1200px) {
-        width: 270px;
-    }
+    @extend %section-item-sett;
 }
 
 .decor {
@@ -44,6 +34,13 @@
     @media screen and (min-width: 1200px) {
         font-size: 15.5rem;
         top: 134px;
+    }
+    &.--grey {
+        color: color(secondary-light);
+        transform: translate(-50%, -40%);
+        @media screen and (min-width: 1200px) {
+            transform: translate(-50%, -35%);
+        }
     }
 }
 
