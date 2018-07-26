@@ -29,31 +29,33 @@
 
 .decor {
     position: absolute;
-    transform: translate(-50%, -30%);
+    display: block;
+    text-align: left;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2px;
     @include font-sett($family: font(RobotoCon-family), $size: 7.5rem, $color: color(decor-blue));
     @media screen and (min-width: 1200px) {
         font-size: 15.5rem;
-        top: 134px;
+        top: 48px;
     }
     &.--grey {
         color: color(secondary-light);
-        transform: translate(-50%, -40%);
+        top: -7px;
         @media screen and (min-width: 1200px) {
-            transform: translate(-50%, -35%);
+            top: 31px;
         }
     }
     &.--top-fix {
         @media screen and (min-width: 1200px) {
-            top: 115px;
+            top: 12px;
         }
     }
     &.--top-fix-asc {
         color: rgba(color(secondary-light), 0.2);
-        @media screen and (max-width: 1199px) {
-            top: 52px;
-        }
+        top: -2px;
         @media screen and (min-width: 1200px) {
-            top: 192px;
+            top: 90px;
         }
     }
 }

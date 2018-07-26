@@ -45,11 +45,11 @@
     position: absolute;
     width: 216px;
     padding: 20px 38px;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(20%);
     bottom: -34px;
     @media screen and (min-width: 1200px) {
         bottom: -44px;
+        transform: translateX(12%);
     }
 }
 

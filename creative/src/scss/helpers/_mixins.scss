@@ -17,7 +17,7 @@
     align-items: $align-items;
 }
 
-@mixin font-sett($family: font(Gothic-family), $size: 1rem, $weight: 400, $transform: unset, $height: 1.2, $color: color(primary-light)) {
+@mixin font-sett($family: font(Gothic-family), $size: 1rem, $weight: 400, $transform: none, $height: 1.2, $color: color(primary-light)) {
     font-family: $family, sans-serif;
     font-size: $size;
     font-weight: $weight;
