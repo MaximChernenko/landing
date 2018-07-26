@@ -990,7 +990,6 @@ a {
 
   .inner-wrapper {
     width: 470px;
-    margin: auto;
   }
 
   .inner-container {
@@ -1142,6 +1141,10 @@ a {
     justify-content: stretch;
     align-items: stretch;
     flex-wrap: wrap;
+  }
+
+  .akita-section__container {
+    align-items: center;
   }
 
   .blog-section {
