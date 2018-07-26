@@ -1,60 +1,66 @@
-.blog-section {
+.team-section {
     position: relative;
     padding: 50px 0 40px;
     @media screen and (min-width: 1200px) {
-        padding: 156px 0 104px;
+        padding: 138px 0 124px;
     }
 }
 
-.blog-section__title {
+.team-section__title {
     position: relative;
     @include font-sett($size: 1.625rem, $weight: 500, $transform: uppercase, $color: color(primary-dark));
     margin-bottom: 40px;
     @media screen and (min-width: 1200px) {
         font-size: 2.35rem;
-        margin-bottom: 100px;        
+        margin-bottom: 126px;
     }
 }
 
-.blog-section__text {
+.team-section__text {
     @include font-sett($size: 1.2rem, $color: color(primary-dark));
     margin-bottom: 20px;
     @media screen and (min-width: 1200px) {
         font-size: 1.875rem;
-        margin-bottom: 72px;  
-        letter-spacing: 1.2px;      
+        margin-bottom: 65px;
+        letter-spacing: 1.2px;
     }
 }
 
-.blog-section__list {
+.team-section__list {
     @extend %section-list-sett;
 }
 
-.blog-section__item {
+.team-section__item {
+    position: relative;
     @extend %section-item-sett;
 }
 
-.blog-article__img {
+.team-section__img {
     @extend %response-img;
-    margin: 0 auto 15px;
+}
+
+.team-content {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: absolute;
+    width: 216px;
+    padding: 20px 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -34px;
     @media screen and (min-width: 1200px) {
-        margin-bottom: 38px;
+        bottom: -44px;
     }
 }
 
-.blog-article__title {
-    @include font-sett($size: 1.125rem, $weight: 500, $transform: uppercase, $color: color(primary-blue));
-    margin-bottom: 8px;
+.team-content__title {
+    @include font-sett($size: 1.25rem, $weight: 500, $transform: uppercase, $color: color(primary-blue));
+    letter-spacing: 1.4px;
     @media screen and (min-width: 1200px) {
-        margin-bottom: 20px;
+        margin-bottom: 4px;
     }
 }
 
-.blog-article__text {
-    text-align: left;
+.team-content__text {
     @include font-sett($size: 0.94rem, $height: 1.6, $color: color(primary-dark));
-    @media screen and (min-width: 1200px) {
-        text-align: center;
-        letter-spacing: 0.85px;
-    }
 }

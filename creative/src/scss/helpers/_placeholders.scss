@@ -26,10 +26,32 @@
     @media screen and (min-width: 1200px) {
         width: 270px;
     }
+    &.--mg {
+        @media screen and (max-width: 1199px) {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
 
 %response-img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+%input-sett {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid color(primary-light);
+    @include font-sett($size: 0.94rem);
+    @media screen and (max-width: 1199px) {
+        margin: 0 auto 20px;
+    }
+    &::-webkit-input-placeholder {
+        @include font-sett($size: 0.94rem);
+    }
 }

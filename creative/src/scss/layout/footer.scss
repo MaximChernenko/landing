@@ -1,0 +1,38 @@
+.footer {
+    padding: 30px 0;
+    background-color: color(primary-dark);
+    @media screen and (min-width: 1200px) {
+        padding:44px 0;
+    }
+}
+
+.container {
+    @media screen and (min-width: 1200px) {
+        @include flex-pos($align-items: center);
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+.footer__copyright {
+    @include font-sett($size: 0.94rem);
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__des-by {
+    @include font-sett($size: 0.94rem);
+}
+
+.footer__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    @include background-sett(url(../img/icon-bee.png));
+    @media screen and (min-width: 1200px) {
+        width: 30px;
+        height: 30px;
+    }
+}

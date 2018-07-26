@@ -1,0 +1,71 @@
+.about-section {
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px 0;
+    @include background-sett(url(../img/about-back.jpg));
+    @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        @include background-sett(url(../img/about-back@2x.jpg));
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 222px 0 100px;
+    }
+}
+
+.about-section__title {
+    position: relative;
+    @include font-sett($size: 1.625rem, $weight: 500, $transform: uppercase, $color: color(primary-light));
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 144px;
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+}
+
+.about-form {
+    @media screen and (min-width: 1200px) {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+.row {
+    @media screen and (min-width: 1200px) {
+        @include flex-pos();
+        margin-bottom: 40px;
+    }
+}
+
+.about-form__input {
+    @extend %input-sett;
+    @media screen and (min-width: 1200px) {
+        width: 368px;
+        padding: 13px 20px;
+    }
+}
+
+.about-form__textarea {
+    @extend %input-sett;
+    resize: none;
+    width: 220px;
+    height: 80px;
+    @media screen and (min-width: 1200px) {
+        width: 100%;
+        height: 148px;
+        margin-bottom: 47px;
+    }
+}
+
+.about-form__btn {
+    padding: 10px 0;
+    width: 200px;
+    background-color: color(primary-blue);
+    border: none;
+    @include font-sett($size: 1.2rem, $weight: 500, $transform: uppercase);
+    cursor: pointer;
+    @media screen and (min-width: 1200px) {
+        width: 228px;
+        padding: 18px 0;
+        font-size: 1.5rem;
+    }
+}

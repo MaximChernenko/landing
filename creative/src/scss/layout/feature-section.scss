@@ -42,6 +42,20 @@
             transform: translate(-50%, -35%);
         }
     }
+    &.--top-fix {
+        @media screen and (min-width: 1200px) {
+            top: 115px;
+        }
+    }
+    &.--top-fix-asc {
+        color: rgba(color(secondary-light), 0.2);
+        @media screen and (max-width: 1199px) {
+            top: 52px;
+        }
+        @media screen and (min-width: 1200px) {
+            top: 192px;
+        }
+    }
 }
 
 .item-section__des {
