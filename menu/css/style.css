@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    height: 200px;
+    background-color: rgb(161, 121, 75);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: #e9f3df;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 32px;
+    right: 31px;
+}
+
+.logo {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1d1818;
+}
+
+.logo:hover {
+    background-color: #f3dfdf;
+}
+
+.logo:hover .logo__icon {
+    fill: #1d1818;
+}
+
+.logo__icon {
+    margin: auto;
+    fill: #f3dfdf;
+    width: 40px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.menu__item {
+    cursor: pointer;
+    display: flex;
+    width: 25%;
+    background-color: #1d1818;
+}
+
+.menu__item:not(:last-child) {
+    border-right: 2px solid #f3dfdf;
+}
+
+.menu__item:hover {
+    background-color: #f3dfdf;
+}
+
+.menu__item:hover .menu__link {
+    color: #1d1818;
+}
+
+.menu__link {
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    color: #f3dfdf;
+    text-decoration: none;
+}
+
+.green-box {
+    height: 550px;
+    background-color: green;
+}
+
+.red-box {
+    height: 550px;
+    background-color: red;
+}
+
+.violet-box {
+    height: 550px;
+    background-color: violet;
+}
+
+.pink-box {
+    height: 550px;
+    background-color: pink;
+}
